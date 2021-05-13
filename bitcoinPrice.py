@@ -17,5 +17,6 @@ while (True):
     currentPrice = data["bpi"]["GBP"]["rate_float"]
     toGbp = round(currentPrice * owned,2) 
     time.sleep(1)
+    # other methods from the luma library doesn't seem to work with this particular screen
     device.text = '£' + str(data["bpi"]["GBP"]["rate"]) + '\n£' + str(toGbp)
     time.sleep(30)
